@@ -1,0 +1,48 @@
+body {
+    background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+}
+#firstName {
+    color: red;
+}
+
+input  {
+    width:95%;
+    height: 20px;
+    padding: 8px;
+}
+
+::placeholder{
+    margin-right: 60px;
+}
+.container {
+    margin: auto;
+
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    width: fit-content;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 90px;
+}
+
+#month {
+    height: 39px;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#day, #year {
+    width: 120px;
+}
+
+#clear, #submit {
+    height: 40px;
+    width: 49%;
+    background: #ff8585; 
+    border: none;
+    color: white;
+}

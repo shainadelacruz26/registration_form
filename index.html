@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>User Details Form</title>
+    <script>
+        function submitForm() {
+            var firstName = document.getElementById("firstName").value;
+            var middleName = document.getElementById("middleName").value;
+            var lastName = document.getElementById("lastName").value;
+            var month = document.getElementById("month").value;
+            var day = document.getElementById("day").value;
+            var year = document.getElementById("year").value;
+            var address = document.getElementById("address").value;
+
+      
+            if (firstName === "" || lastName === "" || month === "" || day === "" || year === "" || address === "") {
+                alert("All details are required!");
+                return;
+            }
+
+            var userDetails = "First Name: " + firstName + "\n";
+            userDetails += "Middle Name: " + middleName + "\n";
+            userDetails += "Last Name: " + lastName + "\n";
+            userDetails += "Birthday: " + month + "/" + day + "/" + year + "\n";
+            userDetails += "Address: " + address;
+
+            alert(userDetails);
+        }
+
+        function clearForm() {
+            document.getElementById("firstName").value = "";
+            document.getElementById("middleName").value = "";
+            document.getElementById("lastName").value = "";
+            document.getElementById("month").value = "";
+            document.getElementById("day").value = "";
+            document.getElementById("year").value = "";
+            document.getElementById("address").value = "";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+    <h1>Registration Form</h1>
+    <form>
+      
+        <input type="text" id="firstName" placeholder="First Name" required><br><br>
+
+        
+        <input type="text" id="middleName" placeholder="Middle Name"><br><br>
+
+       
+        <input type="text" id="lastName" placeholder="Last Name" required><br><br>
+
+        <label id="bday">Birthday:</label>
+        <select id="month" required>
+            <option value="" disabled selected>Month</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+       
+        </select>
+        <input type="number" id="day" placeholder="Day" min="1" max="31" required>
+        <input type="number" id="year" placeholder="Year" min="1900" max="2099" required><br><br>
+
+       
+        <input type="text" id="address" placeholder="Address" required><br><br>
+
+        <p><input type="button" value="Clear" onclick="clearForm()" id="clear"> <input type="button" value="Submit" onclick="submitForm()" id="submit"></p>
+
+    </form>
+    </div>
+</body>
+</html>
